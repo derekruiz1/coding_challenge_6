@@ -6,3 +6,10 @@ function calculateProfit(costPrice, sellingPrice, unitsSold) {
 calculateProfit(20,30,100); 
 calculateProfit(50,70,200);
 
+//Task 2 - Function Expression
+const calculateSalesTax = function calculateSalesTax(amount, taxRate) {
+    [SalesTax = amount * taxRate]
+        console.log("The sales tax is: $","$" + SalesTax)
+};
+calculateSalesTax(100,0.07);
+calculateSalesTax(500,0.01);

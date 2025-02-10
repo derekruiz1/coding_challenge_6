@@ -47,3 +47,10 @@ console.log("Cost:","$" + total)
 
 calculateSubscriptionCost("Basic", 6, 10)
 calculateSubscriptionCost("Premium", 12, 0)
+
+//Task 5 - Returning Values
+let convertCurrency = (amount, exchangeRate) => {
+console.log("Converted Amount","$" + (amount * exchangeRate));
+}
+convertCurrency(100,1.1)
+convertCurrency(250,0.85)

@@ -22,8 +22,28 @@ const calculateBonus = (salary, performanceRating) => {
         "Average": 0.05
     }; //Parameters for bonus 20%, 10%, 5% respectively
 
-    return console.log("Bonus:" , "$" + salary * (bonus[performanceRating]));
+        console.log("Bonus:" , "$" + salary * (bonus[performanceRating]));
 };
 
 calculateBonus(5000, "Excellent");
 calculateBonus(7000, "Good");
+
+//Task 4 - Parameters and Arguments
+let calculateSubscriptionCost = (plan, months, discount = 0) => {
+
+let rate;
+ if (plan == "Basic") {
+    rate = 10
+} else if (plan == "Premium") {
+    rate = 20
+}  else if (plan == "Enterprise") {
+    rate = 50
+} //Different Rates offered
+
+let total = (rate * months) - discount //Calculating rate with discount 
+
+console.log("Cost:","$" + total)
+}
+
+calculateSubscriptionCost("Basic", 6, 10)
+calculateSubscriptionCost("Premium", 12, 0)

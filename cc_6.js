@@ -50,7 +50,18 @@ calculateSubscriptionCost("Premium", 12, 0)
 
 //Task 5 - Returning Values
 let convertCurrency = (amount, exchangeRate) => {
-console.log("Converted Amount","$" + (amount * exchangeRate));
+console.log("Converted Amount","$" + (amount * exchangeRate)); //Multiples amount with exchange rate
 }
 convertCurrency(100,1.1)
 convertCurrency(250,0.85)
+
+//Task 6 - Higher-Order Functions
+
+let orders = [200, 600, 1200, 450, 800] //Original Array
+
+let applyBulkDiscount = (orders, discount) => {
+   let discountOrders = orders.map(discount) //Discounting the array 
+    console.log("Totals:", discountOrders) 
+};
+
+applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount); 

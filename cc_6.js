@@ -65,3 +65,18 @@ let applyBulkDiscount = (orders, discount) => {
 };
 
 applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount); 
+
+//Task 7 - Closures
+function createExpenseTracker() {
+    
+    let expenses = 0; //Beginning balance
+
+    return function (newExpense) { 
+        expenses += newExpense; //Formula to add expenses on to each other
+        console.log("Expenses:", "$" + expenses); 
+    };
+}
+
+let tracker = createExpenseTracker(); 
+tracker(200); 
+tracker(150); 

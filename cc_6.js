@@ -68,7 +68,7 @@ applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount);
 
 //Task 7 - Closures
 function createExpenseTracker() {
-    
+
     let expenses = 0; //Beginning balance
 
     return function (newExpense) { 
@@ -80,3 +80,16 @@ function createExpenseTracker() {
 let tracker = createExpenseTracker(); 
 tracker(200); 
 tracker(150); 
+
+//Task 8 - Recursion in JavaScript 
+function calculateYearsToPromotion(employeeLevel) {
+    
+    if (employeeLevel >= 10) {
+        return 0 //Cap that stops anything past 10 
+    }
+    else 
+return ((10 - employeeLevel) * 2); //Formula calculating promotion
+}
+
+console.log("Years to Promotion:", calculateYearsToPromotion(7)); 
+console.log("Years to Promotion:", calculateYearsToPromotion(5)); 
